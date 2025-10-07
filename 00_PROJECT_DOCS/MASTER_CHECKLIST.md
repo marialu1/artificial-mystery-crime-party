@@ -9,8 +9,8 @@ Use status indicators: 🔴 Not started | 🟡 In progress | 🟢 Complete | ⚠
 
 ## 📋 CORE NARRATIVE & PLOT
 
-- [ ] 🔴 Crime summary document
-- [ ] 🔴 Complete timeline of crime
+- [x] � Crime summary document
+- [x] � Complete timeline of crime
 - [ ] 🔴 Character relationships map
 - [ ] 🔴 Theme and tone guide
 - [ ] 🔴 Plot twists documentation
@@ -22,7 +22,7 @@ Use status indicators: 🔴 Not started | 🟡 In progress | 🟢 Complete | ⚠
 ### Status: ~90% Complete
 
 - [ ] 🟡 J.C. Mendes (Detective) - Player dossier
-- [ ] 🟡 Helena Ashford (Hostess) - Game Master notes
+- [x] � Helena Ashford (Hostess) - Game Master notes - COMPLETE DOSSIER
 - [ ] 🟡 James Harrods (Banker) - Player dossier
 - [ ] 🟡 Emilia Harrods (Spiritualist) - Player dossier
 - [ ] 🟡 Daisy Valmont (Opera Diva) - Player dossier
@@ -84,8 +84,8 @@ Use status indicators: 🔴 Not started | 🟡 In progress | 🟢 Complete | ⚠
 ## 🎮 GAME MASTER MATERIALS
 
 ### Helena's Master Script
-- [ ] 🔴 Full master script (Markdown)
-- [ ] 🔴 Full master script (PDF)
+- [x] � Full master script (Markdown) - HELENA_COMPLETE_DOSSIER.md
+- [ ] � Full master script (PDF) - Pending conversion
 - [ ] 🔴 1-page cheat sheet (Markdown)
 - [ ] 🔴 1-page cheat sheet (PDF)
 - [ ] 🔴 Laminated cheat sheet (for game night)
