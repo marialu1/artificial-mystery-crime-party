@@ -18,12 +18,15 @@ help:
 # Generate repository digest using gitingest
 ingest:
 	@echo "🔍 Creating repository digest..."
-	@if ! command -v gitingest &> /dev/null; then \
+	@if command -v gitingest &> /dev/null; then \
+		gitingest . --output digest.txt; \
+	elif [ -f ~/.local/bin/gitingest ]; then \
+		~/.local/bin/gitingest . --output digest.txt; \
+	else \
 		echo "❌ Error: gitingest is not installed"; \
 		echo "   Install with: pip install gitingest"; \
 		exit 1; \
 	fi
-	gitingest . --output digest.txt
 	@echo "✅ Digest created: digest.txt"
 	@echo "📊 You can now share this file with LLMs!"
 
