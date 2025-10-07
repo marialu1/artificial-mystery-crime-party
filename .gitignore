@@ -26,6 +26,9 @@ Thumbs.db
 digest.txt
 *.log
 
+# Generated PDFs (can be regenerated with `make pdf`)
+*.pdf
+
 # Temporary files
 *.tmp
 *.bak
