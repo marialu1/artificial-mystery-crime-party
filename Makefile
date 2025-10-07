@@ -37,13 +37,13 @@ ingest:
 
 # Check if Pandoc is installed
 check-pandoc:
-	@if ! command -v pandoc &> /dev/null; then \
+	@command -v pandoc > /dev/null 2>&1 || { \
 		echo "❌ Error: pandoc is not installed"; \
 		echo "   Install with:"; \
 		echo "   - Ubuntu/Debian: sudo apt install pandoc texlive-xetex"; \
 		echo "   - macOS: brew install pandoc basictex"; \
 		exit 1; \
-	fi
+	}
 
 # Convert Helena Complete Dossier to PDF
 pdf-helena: check-pandoc
