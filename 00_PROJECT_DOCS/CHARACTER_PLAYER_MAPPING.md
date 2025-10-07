@@ -14,15 +14,16 @@
 | 2 | **James Harrods** | Tiago | Banker / Co-Killer |
 | 3 | **Daisy Valmont** | Maria | Cabaret Singer / Suspect |
 | 4 | **Maria Fletcher** | Adriana | Journalist / Suspect |
-| 5 | **Reginald Ashford III** | Ricardo | Victim / GM Assistant |
+| 5 | **Reginald Ashford III** | Ricardo (Dual Role) | Victim → Clarence (Butler/GM Assistant) |
 | 6 | **Padre Rui Santos** | Rui | Priest / Confessor |
 | 7 | **JC Mendes** | JC | Detective / Investigator |
 | 8 | **Denise Beaumont** | Esmeralda | "Bad Twin" / Suspect |
-| 9 | **Inês Beaumont** | Claire | "Good Twin" / Suspect |
-| 10 | **Emilia Harrods** | Cris | Spiritualist / Suicide Victim |
-| 11 | **Filipp Moretti** | ??? (TBD) | Entrepreneur / Suspect |
+| 9 | **Inês Beaumont** | Claire (also "Claire" in-game) | "Good Twin" / Suspect |
+| 10 | **Emilia Harrods** | Cris (Cristina) | Spiritualist / Suicide Victim / Ex-Nun |
+| 11 | **Filipp Moretti** | **TBD (PENDING ASSIGNMENT)** | Entrepreneur / Suspect |
 
-**Total:** 11 characters (10 players + GM)
+**Total:** 11 characters (10 players + GM)  
+**Status:** Character analysis complete (Oct 7, 2025) - See `CHARACTER_ANALYSIS_COMPLETE.md`
 
 ---
 
@@ -122,6 +123,27 @@
 ---
 
 **GOLDEN RULE:** When in doubt, use CHARACTER NAMES.
+
+---
+
+---
+
+## 🔄 UPDATES & NOTES
+
+### October 7, 2025 - Character Analysis Complete
+- ✅ All 11 characters analyzed and cross-referenced
+- ✅ No contradictions found across all character backstories
+- ⚠️ **Filipp Moretti player assignment PENDING** (currently "TBD")
+- ✅ Ricardo confirmed as dual role: Reggie (victim) → Clarence (butler/GM assistant)
+- ✅ Inês Beaumont also called "Claire" in-game (player's real name)
+- ✅ 2 minor date errors identified (see `CHARACTER_ANALYSIS_COMPLETE.md`)
+
+### Key Character Interconnections Verified:
+- ✅ Padre Rui knows Emilia as ex-nun (Irmã Cristina, 1910-1918)
+- ✅ Padre Rui heard James's murder confession (Dec 20, 1926)
+- ✅ Filipp provided piano wire to James (Dec 21)
+- ✅ Filipp is Daisy's mentor (paternal, not romantic)
+- ✅ Twin backstory fully consistent (1900-1926 timeline)
 
 ---
 
