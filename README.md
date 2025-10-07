@@ -110,7 +110,19 @@ Use these in documents to track progress:
 
 ---
 
-## 💾 Backup Strategy
+## � Git Hooks & Automation
+
+### Pre-commit Hook
+A git pre-commit hook automatically generates a fresh repository digest before each commit. This ensures the digest is always up-to-date.
+
+**Installation:**
+```bash
+./install-hooks.sh
+```
+
+The hook runs `make ingest` automatically before every commit, keeping `digest.txt` current.
+
+## �💾 Backup Strategy
 
 - Keep original files in `10_ARCHIVE/old_versions/` before major changes
 - Export important conversations to `10_ARCHIVE/conversation_exports/`
