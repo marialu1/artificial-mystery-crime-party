@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILIPP MORETTI - DOSSIER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A5 portrait;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .booklet {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(148mm, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+        }
+
+        .page {
+            width: 148mm;
+            height: 210mm;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(139, 0, 0, 0.5), 0 0 80px rgba(0, 0, 0, 0.8);
+            page-break-after: always;
+            border: 2px solid #2a2a2a;
+        }
+
+        /* Occult Background Patterns */
+        .page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(139, 0, 0, 0.02) 10px, rgba(139, 0, 0, 0.02) 11px),
+                repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(139, 0, 0, 0.02) 10px, rgba(139, 0, 0, 0.02) 11px);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* COVER PAGE */
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(circle at 50% 50%, #1a0000 0%, #0a0a0a 100%);
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="1" fill="rgba(255,215,0,0.1)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .occult-eye {
+            position: absolute;
+            top: 30px;
+            width: 100px;
+            height: 100px;
+            border: 3px solid #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .occult-eye::before {
+            content: '◉';
+            font-size: 48pt;
+            color: #d4af37;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+        }
+
+        .pentagram {
+            position: absolute;
+            font-size: 120pt;
+            color: rgba(139, 0, 0, 0.2);
+            transform: rotate(15deg);
+            top: 50%;
+            left: 50%;
+            margin-left: -60pt;
+            margin-top: -60pt;
+            text-shadow: 0 0 40px rgba(139, 0, 0, 0.5);
+        }
+
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 56pt;
+            font-weight: 900;
+            color: #d4af37;
+            text-align: center;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-shadow: 
+                0 0 20px rgba(212, 175, 55, 0.8),
+                0 0 40px rgba(212, 175, 55, 0.4),
+                3px 3px 0 rgba(0, 0, 0, 0.8);
+            margin: 20px 0;
+            z-index: 10;
+        }
+
+        .subtitle {
+            font-family: 'IM Fell English', serif;
+            font-size: 28pt;
+            color: #8b0000;
+            text-align: center;
+            font-style: italic;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(139, 0, 0, 0.8);
+            margin: 10px 0;
+            z-index: 10;
+        }
+
+        .secret-seal {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .seal-outer {
+            width: 100%;
+            height: 100%;
+            border: 4px double #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 
+                0 0 30px rgba(212, 175, 55, 0.6),
+                inset 0 0 30px rgba(212, 175, 55, 0.2);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), inset 0 0 30px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 0 50px rgba(212, 175, 55, 0.9), inset 0 0 50px rgba(212, 175, 55, 0.4); }
+        }
+
+        .seal-inner {
+            font-family: 'Cinzel', serif;
+            font-size: 72pt;
+            color: #d4af37;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 1);
+        }
+
+        .seal-text {
+            position: absolute;
+            font-family: 'Cinzel', serif;
+            font-size: 10pt;
+            color: #d4af37;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .seal-text.top { top: 15px; }
+        .seal-text.bottom { bottom: 15px; }
+
+        .blood-stamp {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-family: 'Cinzel', serif;
+            font-size: 32pt;
+            font-weight: 900;
+            color: #8b0000;
+            transform: rotate(-15deg);
+            border: 4px double #8b0000;
+            padding: 10px 20px;
+            letter-spacing: 0.3em;
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.8);
+            text-shadow: 0 0 10px rgba(139, 0, 0, 1);
+            z-index: 20;
+        }
+
+        /* INTERIOR PAGES */
+        .interior-page {
+            padding: 25px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            position: relative;
+        }
+
+        .page-header {
+            text-align: center;
+            border-top: 2px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
+            padding: 15px 0;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .page-header::before,
+        .page-header::after {
+            content: '◆';
+            position: absolute;
+            color: #8b0000;
+            font-size: 14pt;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .page-header::before { left: 20px; }
+        .page-header::after { right: 20px; }
+
+        .page-title {
+            font-family: 'Cinzel', serif;
+            font-size: 36pt;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(26, 0, 0, 0.3);
+            border-left: 3px solid #8b0000;
+            border-right: 3px solid #8b0000;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 18pt;
+            font-weight: 600;
+            color: #d4af37;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+
+        .section-content {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 11pt;
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+
+        .bullet-item {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .bullet-item::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #8b0000;
+            font-size: 14pt;
+        }
+
+        .relationship-box {
+            background: rgba(139, 0, 0, 0.1);
+            border: 1px solid #8b0000;
+            padding: 12px;
+            margin: 10px 0;
+            box-shadow: inset 0 0 20px rgba(139, 0, 0, 0.2);
+        }
+
+        .relationship-name {
+            font-family: 'Cinzel', serif;
+            font-size: 12pt;
+            font-weight: 600;
+            color: #d4af37;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        .relationship-desc {
+            font-size: 10pt;
+            color: #a0a0a0;
+            line-height: 1.5;
+        }
+
+        .secret-box {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #8b0000;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+        }
+
+        .secret-header {
+            font-family: 'Cinzel', serif;
+            font-size: 14pt;
+            font-weight: 700;
+            color: #8b0000;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
+        }
+
+        .warning {
+            background: linear-gradient(135deg, #1a0000 0%, #0a0000 100%);
+            border: 3px double #8b0000;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.8);
+        }
+
+        .warning-title {
+            font-family: 'Cinzel', serif;
+            font-size: 16pt;
+            font-weight: 900;
+            color: #ff0000;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 1);
+        }
+
+        /* BACK COVER */
+        .back-cover {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at 50% 50%, #1a0000 0%, #0a0a0a 100%);
+            text-align: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .quote-box {
+            border: 2px solid #d4af37;
+            padding: 30px;
+            max-width: 400px;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .quote-text {
+            font-family: 'IM Fell English', serif;
+            font-size: 24pt;
+            font-style: italic;
+            color: #c0c0c0;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .quote-author {
+            font-family: 'Cinzel', serif;
+            font-size: 14pt;
+            color: #d4af37;
+            letter-spacing: 0.15em;
+        }
+
+        .footer-seal {
+            margin-top: 40px;
+            font-size: 48pt;
+            color: #8b0000;
+            text-shadow: 0 0 20px rgba(139, 0, 0, 0.8);
+        }
+
+        @media print {
+            body { background: black; padding: 0; }
+            .booklet { display: block; }
+            .page { box-shadow: none; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="booklet">
+        <!-- PAGE 1: COVER -->
+        <div class="page cover">
+            <div class="occult-eye"></div>
+            <div class="pentagram">★</div>
+            
+            <div class="main-title">FILIPP<br>MORETTI</div>
+            <div class="subtitle">The Silver Fox</div>
+            
+            <div class="secret-seal">
+                <div class="seal-outer">
+                    <div class="seal-inner">FM</div>
+                    <div class="seal-text top">DOSSIER №VIII</div>
+                    <div class="seal-text bottom">MCMXXVI</div>
+                </div>
+            </div>
+            
+            <div style="font-family: 'Cinzel', serif; font-size: 16pt; color: #d4af37; letter-spacing: 0.3em; margin-top: 20px; z-index: 10;">
+                LITTLE ITALY · MANHATTAN
+            </div>
+            
+            <div class="blood-stamp">RISERVATO</div>
+        </div>
+
+        <!-- PAGE 2: IDENTITY -->
+        <div class="page interior-page">
+            <div class="page-header">
+                <div class="page-title">IDENTITÀ</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Nome Completo</div>
+                <div class="section-content" style="text-align: center; font-size: 16pt; color: #d4af37;">
+                    Filipp Antonio Moretti
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Età & Professione</div>
+                <div class="section-content">
+                    <div class="bullet-item"><strong style="color: #d4af37;">Età:</strong> 38 anni</div>
+                    <div class="bullet-item"><strong style="color: #d4af37;">Professione:</strong> Imprenditore Notturno</div>
+                    <div class="bullet-item">Proprietario di 3 speakeasy a Manhattan</div>
+                    <div class="bullet-item">Establishment principale: "Silver Fox Lounge"</div>
+                    <div class="bullet-item">Fornitore di liquori premium illegali</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Connessione all'Host</div>
+                <div class="section-content">
+                    Fornito il "Silver Fox Punch" speciale per la festa ($85). Relazione professionale/sociale con gli Ashford da 2 anni. Cliente stimato ma vigile.
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; color: #8b0000; font-size: 24pt;">
+                ◆ ◆ ◆
+            </div>
+        </div>
+
+        <!-- PAGE 3: RELATIONSHIPS -->
+        <div class="page interior-page">
+            <div class="page-header">
+                <div class="page-title">ALLEATI & NEMICI</div>
+            </div>
+
+            <div class="relationship-box">
+                <div class="relationship-name">⚔ REGINALD ASHFORD (La Vittima)</div>
+                <div class="relationship-desc">
+                    Cliente regolare. Ha RUBATO la tua ricetta segreta del "Silver Fox Punch" e l'ha servita alla SUA festa! Vendetta richiesta.
+                </div>
+            </div>
+
+            <div class="relationship-box">
+                <div class="relationship-name">♛ DAISY VALMONT (Protetta)</div>
+                <div class="relationship-desc">
+                    Scopristi il suo talento 4 anni fa (1922). Sei come un PADRE per lei. Protezione assoluta. Amore PATERNAL, mai romantico.
+                </div>
+            </div>
+
+            <div class="relationship-box">
+                <div class="relationship-name">⚖ JAMES HARRODS (Socio Sospetto)</div>
+                <div class="relationship-desc">
+                    Investì $8,000 nel Silver Fox. Socio silenzioso. SOSPETTI tradimento negli affari. Deve ancora $500.
+                </div>
+            </div>
+
+            <div class="relationship-box">
+                <div class="relationship-name">♕ HELENA ASHFORD (Anfitrione)</div>
+                <div class="relationship-desc">
+                    Relazione cortese. Ordinò il punch per questa festa. Donna elegante ma riservata. Osserva attentamente.
+                </div>
+            </div>
+
+            <div class="relationship-box">
+                <div class="relationship-name">◉ PADRE RUI SANTOS</div>
+                <div class="relationship-desc">
+                    Il prete della tua parrocchia a Little Italy. Conosce i tuoi peccati ma ti rispetta come uomo d'affari.
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 4: PERSONALITY & SECRETS -->
+        <div class="page interior-page">
+            <div class="page-header">
+                <div class="page-title">PERSONALITÀ</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Tratti Dominanti</div>
+                <div class="section-content">
+                    <div class="bullet-item"><strong>CARISMATICO</strong> - Italiano classico, sorriso facile</div>
+                    <div class="bullet-item"><strong>PRAGMATICO</strong> - Gli affari sempre prima</div>
+                    <div class="bullet-item"><strong>PROTETTORE</strong> - Feroce con chi minaccia i tuoi</div>
+                    <div class="bullet-item"><strong>CALCOLATORE</strong> - Ma con cuore per chi merita</div>
+                    <div class="bullet-item"><strong>SOSPETTOSO</strong> - Cresciuto per strada, non ti fidi facilmente</div>
+                </div>
+            </div>
+
+            <div class="secret-box">
+                <div class="secret-header">Cosa SAI</div>
+                <div class="section-content">
+                    <div class="bullet-item">Reggie rubò la tua ricetta del "Silver Fox Punch"</div>
+                    <div class="bullet-item">James ti deve $500 (2 mesi in ritardo)</div>
+                    <div class="bullet-item">Desti piano wire a James il 21 dicembre (pensavi fosse per regalo)</div>
+                </div>
+            </div>
+
+            <div class="secret-box">
+                <div class="secret-header">Cosa NASCONDI</div>
+                <div class="section-content">
+                    <div class="bullet-item">I tuoi speakeasy sono fronti per bootlegging su larga scala</div>
+                    <div class="bullet-item">Hai connessioni con la mafia italiana</div>
+                    <div class="bullet-item">La tua vera fortuna è molto più grande di quanto sembri</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 5: OBJECTIVES -->
+        <div class="page interior-page">
+            <div class="page-header">
+                <div class="page-title">OBIETTIVI</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Questa Notte DEVI</div>
+                <div class="section-content">
+                    <div class="bullet-item"><strong style="color: #d4af37;">1.</strong> Confrontare Reggie sul furto della ricetta (discretamente)</div>
+                    <div class="bullet-item"><strong style="color: #d4af37;">2.</strong> Proteggere Daisy da qualsiasi scandalo o pericolo</div>
+                    <div class="bullet-item"><strong style="color: #d4af37;">3.</strong> Riscuotere i $500 che James ti deve</div>
+                    <div class="bullet-item"><strong style="color: #d4af37;">4.</strong> Mantenere la tua reputazione di uomo rispettabile</div>
+                </div>
+            </div>
+
+            <div class="warning">
+                <div class="warning-title">⚠ MAI RIVELARE ⚠</div>
+                <div class="section-content">
+                    <div class="bullet-item">L'estensione reale del tuo impero di bootlegging</div>
+                    <div class="bullet-item">La vera natura della tua relazione con Daisy (padre/figlia, NON amanti)</div>
+                    <div class="bullet-item">Che desti piano wire a James (finché non capiscono che è l'arma del crimine)</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <div style="font-family: 'IM Fell English', serif; font-size: 16pt; font-style: italic; color: #8b0000; line-height: 1.6;">
+                    "Mio Dio! Che disgrazia!"<br>
+                    "In questa città, guardi le spalle<br>
+                    o perdi tutto"
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 6: BACK COVER -->
+        <div class="page back-cover">
+            <div style="font-size: 80pt; color: #8b0000; margin-bottom: 40px; text-shadow: 0 0 40px rgba(139, 0, 0, 1);">
+                ★
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-text">
+                    "In this city,<br>
+                    even the Silver Fox<br>
+                    must watch his back..."
+                </div>
+                <div class="quote-author">— FILIPP MORETTI</div>
+            </div>
+
+            <div class="footer-seal">◉</div>
+
+            <div style="font-family: 'Cinzel', serif; font-size: 12pt; color: #d4af37; letter-spacing: 0.2em; margin-top: 30px;">
+                CHRISTMAS MURDER<br>
+                DINNER MCMXXVI<br>
+                <span style="font-size: 10pt; color: #8b0000;">THE GATSBY ROSE MANOR</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

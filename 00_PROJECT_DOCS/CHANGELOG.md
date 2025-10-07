@@ -38,6 +38,34 @@ All notable changes to this project will be documented in this file.
 - **Status:** ✅ Complete
 - **Next Steps:** Fix 2 date errors before creating player dossiers
 
+### Character Booklet Design System (October 7, 2025 - Evening)
+- **Action:** Complete design system for A5 character booklets created
+- **Files Created:**
+  - `00_PROJECT_DOCS/MEMORY_BANK.md` - Project memory bank with all key facts
+  - `09_DESIGN_ASSETS/A5_CHARACTER_BOOKLET_DESIGN_GUIDE.md` - Comprehensive 75-page design guide
+  - `09_DESIGN_ASSETS/CANVA_EXPORT_GUIDE.md` - Step-by-step Canva workflow guide
+  - `09_DESIGN_ASSETS/character_booklets/Filipp_Moretti_CATHEDRAL.html` - Baroque cathedral design template
+  - `09_DESIGN_ASSETS/character_booklets/Filipp_Moretti_Booklet_SAMPLE.html` - Original sample template
+  - `09_DESIGN_ASSETS/character_booklets/Filipp_Moretti_Booklet_V2_OCCULT.html` - Occult variant template
+  - `09_DESIGN_ASSETS/character_booklets/08_Filipp_Moretti/` - Character folder structure created
+- **First Booklet Completed:**
+  - `09_DESIGN_ASSETS/character_booklets/08_Filipp_Moretti/Filipp_Moretti_Booklet_PRINT.pdf` - 8.8MB, 6 pages
+  - Designed in Canva, exported as high-quality print PDF (300 DPI)
+  - Includes: Identity, Relationships, Personality, 4 Layered Secrets, Goals, How to Play
+- **Design Specifications:**
+  - A5 format (148×210mm) portrait orientation
+  - Vintage baroque cathedral aesthetic (cream paper, sepia tones, ornate frames)
+  - Typography: Tangerine (script) + Libre Baskerville (serif) + Playfair Display
+  - Color palette: #f5f0e8 (cream), #3d2817 (sepia), #cc0000 (red stamp)
+  - 6-page structure: Cover, Identity, Relationships, Personality, Secrets/Objectives, Back Cover
+- **Production Ready:**
+  - ✅ Canva template ready for duplication
+  - ✅ Export workflow documented
+  - ✅ File organization structure established
+  - ✅ Print settings specified (home printer + professional options)
+- **Status:** ✅ Design system complete, 1/11 booklets created
+- **Next Steps:** Create booklets for remaining 10 characters using Canva template
+
 ---
 
 ## Template for Future Entries
