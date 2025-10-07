@@ -17,12 +17,12 @@ This is a complete murder mystery dinner party game where 11 players take on rol
 
 ## 📚 Quick Links
 
-- [Master Checklist](MASTER_CHECKLIST.md) - Track all deliverables
-- [Project Timeline](PROJECT_TIMELINE.md) - Milestones and deadlines
-- [Changelog](CHANGELOG.md) - Document updates and changes
-- [Character List](../02_CHARACTERS/) - All 11 character folders
-- [Game Master Script](../04_GAME_MASTER_MATERIALS/helena_master_script/) - Helena's master materials
-- [Universal Materials](../03_UNIVERSAL_MATERIALS/) - Invitations, menu, rules, etc.
+- [Master Checklist](00_PROJECT_DOCS/MASTER_CHECKLIST.md) - Track all deliverables
+- [Project Timeline](00_PROJECT_DOCS/PROJECT_TIMELINE.md) - Milestones and deadlines
+- [Changelog](00_PROJECT_DOCS/CHANGELOG.md) - Document updates and changes
+- [Character List](02_CHARACTERS/) - All 11 character folders
+- [Game Master Script](04_GAME_MASTER_MATERIALS/helena_master_script/) - Helena's master materials
+- [Universal Materials](03_UNIVERSAL_MATERIALS/) - Invitations, menu, rules, etc.
 
 ---
 
