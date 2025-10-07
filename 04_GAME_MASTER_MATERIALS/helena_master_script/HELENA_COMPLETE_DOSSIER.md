@@ -452,7 +452,7 @@ James: *"Tell me."*
 >
 > *We kill him. Together. Fast.*
 >
-> *Then we stage it. Make it look like someone else. During Adriana's performance - everyone distracted.*
+> *Then we stage it. Make it look like someone else. During Daisy's performance - everyone distracted.*
 >
 > *I 'discover' the body. Scream. Grief.*
 >
@@ -739,7 +739,7 @@ James: Wiped wire on handkerchief, ready to hide it.
 
 Both: Attempted to wipe blood from carpet (left faint stain = CLUE).
 
-**Helena (checking clock):** *"20h13. Adriana's second song should start any moment. That's our window."*
+**Helena (checking clock):** *"20h13. Daisy's second song should start any moment. That's our window."*
 
 **James:** *"How are you so CALM?!"*
 
@@ -1048,7 +1048,7 @@ This is what you're ACTUALLY feeling. Never show directly, but it informs everyt
 > [But allow yourself ONE micro-glance at James - brief, then away]
 
 **When Daisy arrives:**
-> Helena: *"Adriana, darling! Thank you so much for performing tonight."*  
+> Helena: *"Daisy, darling! Thank you so much for performing tonight."*  
 > [Slight tension - Daisy was Reggie's mistress, you "don't know" but might suspect]
 
 **Managing Reggie (Ricardo):**
@@ -1198,13 +1198,9 @@ Helena: *"I... I was showing him his Christmas present. It was in there."* [true
 
 Player: *"This handkerchief has 'H+J' embroidered on it. Helena and... James?"*
 
-Helena: [quick thinking] *"That's... that's not mine. I don't embroider my handkerchiefs."* [true - Reggie bought yours] *"Could it be... wait."* [pause, as if realizing] *"Adriana. Her name is Adriana, but maybe... and Thomas was Reggie's middle name? Could it be A+T but we're reading it wrong?"* 
+Helena: [quick thinking] *"That's... that's not mine. I don't embroider my handkerchiefs."* [true - Reggie bought yours] *"H could be anyone. Helen? Harriet? And J could be John, Joseph... You're REACHING."*
 
 [Weak deflection, but plants doubt]
-
-**OR (bolder move):**
-
-Helena: *"H could be anyone. Helen? Harriet? And J could be John, Joseph... You're REACHING."*
 
 ---
 
